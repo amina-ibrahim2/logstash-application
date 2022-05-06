@@ -1,0 +1,16 @@
+[proxy]
+bastion.example.com
+
+[nodes]
+192.168.2.217
+192.168.2.217
+192.168.2.51
+
+[nodes:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -p 2222 -W %h:%p -q username@bastion.example.com"'
+
+#ALL-SERVERS WILL BE
+
+[elasticsearch]
+
+
